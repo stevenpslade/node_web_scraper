@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/stevenpslade/node_web_scraper/issues"
   },
-  "homepage": "https://github.com/stevenpslade/node_web_scraper"
+  "homepage": "https://github.com/stevenpslade/node_web_scraper",
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "request": "^2.65.0"
+  }
 }
