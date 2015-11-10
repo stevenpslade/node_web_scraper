@@ -1,7 +1,10 @@
-// var http = require('http');
+var request = require('request');
 
-// http.get(process.argv[2], function (request) {
-//   request.setEncoding('utf8')
-//   request.on('data', console.log)
-//   request.on('error', console.error)
-// });
+request('http://substack.net/images/', function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+    // console.log(body) // Show the HTML for the Substack images page.
+    var cheerio = require('cheerio'),
+      $ = cheerio.load(body);
+      // console.log($('tr td:first-child').text()); get the file permissions
+  }
+});
